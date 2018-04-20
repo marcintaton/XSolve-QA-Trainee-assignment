@@ -29,6 +29,8 @@ Based on assumptions made regarding specific input fields
 
 In order to fully test the registration form at least two test cases must be made for every required field in the registration form. This task has to be performed twice: with checkbox checked and unchecked.
 
+### A script performing tests of case 1 (unchecked checkbox) can be found in **case1.py**
+
 ### These are test cases for unchecked checkbox, testing different name, surname and email variations:
 
 ### Case 1.1
@@ -149,6 +151,8 @@ Input:
 
 Expected output:
 * Success
+
+### A script performing tests of case 2 (unchecked checkbox) can be found in **case2.py**
 
 ### These are test cases for checked checkbox, testing different name, surname and email variations, while **Food preferences** and **Phone number** remain valid:
 
