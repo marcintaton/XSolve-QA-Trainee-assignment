@@ -22,7 +22,7 @@ Based on assumptions made regarding specific input fields
 ### Other assumptions
 * Whenever form submition fails, the registration forms notifies user which field(s) failed the pre-conditions check (example below). This will allow us to apply changes between test cases to multiple fields, allowing to reduce test cases' count, while retaining test accuracy. Should such feature be unavailable a tast case would have to be made for every possible input combination.
 
-![alt text](/example.png)
+![Example](example.png)
 
 ## Test cases
 
