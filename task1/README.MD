@@ -20,9 +20,8 @@ Based on assumptions made regarding specific input fields
 * The form is successfully submited
 
 ### Other assumptions
+* Even if checkbox was checked, and **Phone number** field filled in, if upon submition checkbox is unchecked, the data from **Phone number** and **Food preferences** fields will not be submitted. This specific situation can be turned into series of test cases and tested. For the purposes of this task however, I will assume that checkbox works properly.
 * Whenever form submition fails, the registration forms notifies user which field(s) failed the pre-conditions check (example below). This will allow us to apply changes between test cases to multiple fields, allowing to reduce test cases' count, while retaining test accuracy. Should such feature be unavailable a tast case would have to be made for every possible input combination.
-
-![Example](example.png)
 
 ## Test cases
 
@@ -122,6 +121,32 @@ Input:
 Expected output:
 * Failure due to **First name** containg forbidden special characters
 * Failure due to **Email** having invalid format
+
+### These are test cases for unchecked checkbox, testing various fields being empty:
+
+### Case 1.9
+Input:
+* **First name**: 
+* **Last name**: 
+* **Company**: 
+* **Email**:
+* **Checkbox**: false
+
+Expected output:
+* Failure due to **First name** being empty
+* Failure due to **Last name** being empty
+* Failure due to **Company** being empty
+
+### Case 1.10
+Input:
+* **First name**: Name
+* **Last name**: Surname
+* **Company**: CompanyName
+* **Email**: 
+* **Checkbox**: false
+
+Expected output:
+* Success
 
 ### These are test cases for checked checkbox, testing different name, surname and email variations, while **Food preferences** and **Phone number** remain valid:
 
@@ -340,3 +365,31 @@ Input:
 
 Expected output:
 * Success
+
+### These are test cases for checked checkbox, testing various fields being empty:
+
+### Case 2.17
+Input:
+* **First name**: Name
+* **Last name**: Surname
+* **Company**: CompanyName
+* **Email**: 
+* **Checkbox**: true
+* **Food preferences**: No special preferences
+* **Phone number**: 1234 56789
+
+Expected output:
+* Success
+
+### Case 2.18
+Input:
+* **First name**: Name
+* **Last name**: Surname
+* **Company**: CompanyName
+* **Email**: 
+* **Checkbox**: true
+* **Food preferences**: No special preferences
+* **Phone number**:
+
+Expected output:
+* Failure due to **Phone number** being empty
