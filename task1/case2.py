@@ -39,8 +39,8 @@ class Registration_form_with_after_party (unittest.TestCase):
         driver.find_element_by_name("submit").click()
         # Let us assume that after successfull form submition we are reditected to a confirmation page with different title than original page
         try:
-            WebDriverWait(driver, 15,).until_not(EC.title_is(title),
-                                                 "Timeout while waiting for confirmation page")
+            WebDriverWait(driver, 15).until_not(EC.title_is(title),
+                                                "Timeout while waiting for confirmation page")
         finally:
             self.tearDown()
 
