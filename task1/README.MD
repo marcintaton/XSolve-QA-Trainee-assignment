@@ -23,6 +23,8 @@ Based on assumptions made regarding specific input fields
 * Even if checkbox was checked, and **Phone number** field filled in, if upon submition checkbox is unchecked, the data from **Phone number** and **Food preferences** fields will not be submitted. This specific situation can be turned into series of test cases and tested. For the purposes of this task however, I will assume that checkbox works properly.
 * Whenever form submition fails, the registration forms notifies user which field(s) failed the pre-conditions check (example below). This will allow us to apply changes between test cases to multiple fields, allowing to reduce test cases' count, while retaining test accuracy. Should such feature be unavailable a tast case would have to be made for every possible input combination.
 
+![Example](example.png)
+
 ## Test cases
 
 In order to fully test the registration form at least two test cases must be made for every required field in the registration form. This task has to be performed twice: with checkbox checked and unchecked.
