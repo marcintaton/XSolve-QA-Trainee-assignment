@@ -137,30 +137,51 @@ class Checkout_page(Base_page.Base_page):
             raise
 
     def guest_step3_continue(self):
-        super().has_class(super().get_elem(Checkout_page_locators.step3_collapse), "in")
-        super().get_elem(Checkout_page_locators.step3_continue).click()
+        try:
+            super().has_class(super().get_elem(Checkout_page_locators.step3_collapse), "in")
+            super().get_elem(Checkout_page_locators.step3_continue).click()
+        except:
+            raise
 
     def guest_step4_add_comment(self, input):
-        super().has_class(super().get_elem(Checkout_page_locators.step4_collapse), "in")
-        super().set_input(Checkout_page_locators.step4_comment_area, input)
+        try:
+            super().has_class(super().get_elem(Checkout_page_locators.step4_collapse), "in")
+            super().set_input(Checkout_page_locators.step4_comment_area, input)
+        except:
+            raise
 
     def guest_step4_continue(self):
-        super().has_class(super().get_elem(Checkout_page_locators.step4_collapse), "in")
-        super().get_elem(Checkout_page_locators.step4_continue).click()
+        try:
+            super().has_class(super().get_elem(Checkout_page_locators.step4_collapse), "in")
+            super().get_elem(Checkout_page_locators.step4_continue).click()
+        except:
+            raise
 
     def guest_step5_add_comment(self, input):
-        super().has_class(super().get_elem(Checkout_page_locators.step5_collapse), "in")
-        super().set_input(Checkout_page_locators.step5_comment_area, input)
+        try:
+            super().has_class(super().get_elem(Checkout_page_locators.step5_collapse), "in")
+            super().set_input(Checkout_page_locators.step5_comment_area, input)
+        except:
+            raise
 
     def guest_step5_terms_and_cond_checkbox_click(self):
-        super().has_class(super().get_elem(Checkout_page_locators.step5_collapse), "in")
-        super().get_elem(Checkout_page_locators.step5_terms_and_cond_checkbox).click()
+        try:
+            super().has_class(super().get_elem(Checkout_page_locators.step5_collapse), "in")
+            super().get_elem(Checkout_page_locators.step5_terms_and_cond_checkbox).click()
+        except:
+            raise
 
     def guest_step5_continue(self):
-        super().has_class(super().get_elem(Checkout_page_locators.step5_collapse), "in")
-        super().get_elem(Checkout_page_locators.step5_continue).click()
+        try:
+            super().has_class(super().get_elem(Checkout_page_locators.step5_collapse), "in")
+            super().get_elem(Checkout_page_locators.step5_continue).click()
+        except:
+            raise
 
     def guest_step6_submit(self):
-        super().has_class(super().get_elem(Checkout_page_locators.step6_collapse), "in")
-        super().get_elem(Checkout_page_locators.step6_submit).click()
-        return Checkout_success_page.Checkout_success_page(self.driver)
+        try:
+            super().has_class(super().get_elem(Checkout_page_locators.step6_collapse), "in")
+            super().get_elem(Checkout_page_locators.step6_submit).click()
+            return Checkout_success_page.Checkout_success_page(self.driver)
+        except:
+            raise
