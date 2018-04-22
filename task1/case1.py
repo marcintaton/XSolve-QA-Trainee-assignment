@@ -34,8 +34,8 @@ class Registration_form_no_after_party (unittest.TestCase):
         try:
             WebDriverWait(driver, 15).until_not(EC.title_is(title),
                                                 "Timeout while waiting for confirmation page")
-        finally:
-            self.tearDown()
+        except:
+            self.fail()
 
     def tearDown(self):
         self.driver.close()

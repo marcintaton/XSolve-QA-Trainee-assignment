@@ -21,7 +21,7 @@ Based on assumptions made regarding specific input fields
 
 ### Other assumptions
 * Even if checkbox was checked, and **Phone number** field filled in, if upon submition checkbox is unchecked, the data from **Phone number** and **Food preferences** fields will not be submitted. This specific situation can be turned into series of test cases and tested. For the purposes of this task however, I will assume that checkbox works properly.
-* Whenever form submition fails, the registration forms notifies user which field(s) failed the pre-conditions check (example below). This will allow us to apply changes between test cases to multiple fields, allowing to reduce test cases' count, while retaining test accuracy. Should such feature be unavailable a tast case would have to be made for every possible input combination.
+* Whenever form submition fails, the registration form notifies user which field(s) failed the pre-condition check (example below). This will allow us to apply changes between test cases to multiple fields, allowing to reduce test cases count, while retaining test accuracy. Should such feature be unavailable a tast case would have to be made for every possible input combination.
 
 ![Example](example.png)
 
@@ -97,8 +97,8 @@ Input:
 * **Checkbox**: false
 
 Expected output:
-* Failure due to **First name** containg digit
-* Failure due to **Last name** containg digit
+* Failure due to **First name** containing digit
+* Failure due to **Last name** containing digit
 * Failure due to **Email** having invalid format
 
 ### Case 1.7
@@ -110,8 +110,8 @@ Input:
 * **Checkbox**: false
 
 Expected output:
-* Failure due to **First name** containg forbidden special characters
-* Failure due to **Last name** containg forbidden special characters
+* Failure due to **First name** containing forbidden special characters
+* Failure due to **Last name** containing forbidden special characters
 * Failure due to **Email** having invalid format
 
 ### Case 1.8
@@ -123,7 +123,7 @@ Input:
 * **Checkbox**: false
 
 Expected output:
-* Failure due to **First name** containg forbidden special characters
+* Failure due to **First name** containing forbidden special characters
 * Failure due to **Email** having invalid format
 
 ### These are test cases for unchecked checkbox, testing various fields being empty:
@@ -233,8 +233,8 @@ Input:
 * **Phone number**: 123456789
 
 Expected output:
-* Failure due to **First name** containg digit
-* Failure due to **Last name** containg digit
+* Failure due to **First name** containing digit
+* Failure due to **Last name** containing digit
 * Failure due to **Email** having invalid format
 
 ### Case 2.7
@@ -248,8 +248,8 @@ Input:
 * **Phone number**: 123456789
 
 Expected output:
-* Failure due to **First name** containg forbidden special characters
-* Failure due to **Last name** containg forbidden special characters
+* Failure due to **First name** containing forbidden special characters
+* Failure due to **Last name** containing forbidden special characters
 * Failure due to **Email** having invalid format
 
 ### Case 2.8
@@ -263,7 +263,7 @@ Input:
 * **Phone number**: 123456789
 
 Expected output:
-* Failure due to **First name** containg forbidden special characters
+* Failure due to **First name** containing forbidden special characters
 * Failure due to **Email** having invalid format
 
 ### These are test cases for checked checkbox, testing different Food preferences and Phone number variations, while all other fields remain valid:

@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 
-from Main_page import Main_page
+from MainPage import MainPage
 
 
 class Tests (unittest.TestCase):
@@ -13,7 +13,7 @@ class Tests (unittest.TestCase):
 
     def test_case1(self):
         try:
-            main_page = Main_page(self.driver)
+            main_page = MainPage(self.driver)
             main_page.to_cart_prod3(2)
             product1_page = main_page.goto_product1_page()
 
@@ -63,7 +63,7 @@ class Tests (unittest.TestCase):
 
             checkout_success_page = checkout_page.guest_step6_submit()
 
-            main_page = checkout_success_page.goto_to_main_page()
+            main_page = checkout_success_page.goto_main_page()
 
         except:
             self.fail()

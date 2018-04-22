@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
 
-class Base_page(object):
+class BasePage(object):
 
     def __init__(self, driver):
         self.driver = driver
@@ -25,18 +25,9 @@ class Base_page(object):
         except:
             raise
 
-    def clear_alert(self):
-        try:
-            WebDriverWait(self.driver, 10).until(
-                expected_conditions.presence_of_element_located((By.CLASS_NAME, 'alert')))
-            WebDriverWait(self.driver, 10).until(
-                expected_conditions.presence_of_element_located((By.CLASS_NAME, 'close'))).click()
-        except:
-            raise
-
-    def has_class(self, obj, class_name):
+    def has_attribute(self, obj, attribute, attr_name):
         try:
             WebDriverWait(self.driver, 10).until(lambda s:
-                                                 class_name in obj.get_attribute("class").split())
+                                                 attr_name in obj.get_attribute(attribute).split())
         except:
             raise
