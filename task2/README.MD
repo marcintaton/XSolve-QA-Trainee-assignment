@@ -6,5 +6,6 @@
 
 <br>
 
-A test case can be found in **Tests.py**
+A test case can be found in **Tests.py**.
+
 Since no login data was provided, the test case was prepared for guest user only.
